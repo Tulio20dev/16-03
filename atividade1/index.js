@@ -21,13 +21,13 @@ function contaSenha(){
     }
 }
 function vereficaEmail(){
-    if (campo.value.includes("@"))
+    if (!campo.value.includes("@"))
         error.innerText = "seu email nao esta compelto"
         
     }
 
-campo.addEventListener("change",vereficaEmail);
-campo2.addEventListener("change",contaSenha);
+campo.addEventListener("input",vereficaEmail);
+campo2.addEventListener("input",contaSenha);
 botao.addEventListener("click",exibeAlert);
 
 
