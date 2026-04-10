@@ -20,7 +20,14 @@ function contaSenha(){
         error.innerText = "Sua senha esta curta"
     }
 }
-campo2.addEventListener("change",contaSenha)
+function vereficaEmail(){
+    if (campo.value.includes("@"))
+        error.innerText = "seu email nao esta compelto"
+        
+    }
+
+campo.addEventListener("change",vereficaEmail);
+campo2.addEventListener("change",contaSenha);
 botao.addEventListener("click",exibeAlert);
 
 
